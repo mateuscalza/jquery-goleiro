@@ -1,159 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<!-- Codificação -->
-<meta charset="utf-8">
-<!-- Título da página -->
-<title>Treinamento de goleiro</title>
-<!-- Estrutura -->
-<link rel="stylesheet" type="text/css" href="css/app.css">
-</head>
+  <head>
+    <!-- Codificação -->
+    <meta charset="utf-8" />
+    <!-- Título da página -->
+    <title>Treinamento de goleiro</title>
+    <!-- Estrutura -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+  </head>
 
-<body>
-	<!-- Jogo -->
-	<div class="main" id="jogoplace">
-		<div id="jogo">
-			<!-- Estádio -->
-			<img src="midias/estadio.svg" id="estadio" width="800" height="573" >
-			<!-- Placar -->
-			<div id="placar">00</div>
-			<!-- Bola -->
-			<div id="bola">
-				<div id="agrupa-gomos">
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        	<div class="bloco-gomos">
-		            	<div class="gomo" style="left: 6px; top: 6px;"></div>
-		            	<div class="gomo" style="left: 37px; top: 0px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 10px;"></div>
-		                
-		            	<div class="gomo" style="left: 0px; top: 40px;"></div>
-		            	<div class="gomo" style="left: 32px; top: 36px;"></div>
-		            	<div class="gomo" style="right: 4px; top: 42px;"></div>
-		            </div>
-		        </div>
-			</div>
-			<!-- Feedback -->
-			<div id="feedback"></div>
-			<!-- Luva -->
-			<img src="midias/luva.svg" id="luva" width="150">
-		</div>
-	</div>
-	<!-- Modal de dialog -->
-	<div class="main" id="modal">
-		<!-- -->
-		<div id="inicio">
-			<form>
-				<!-- Nome -->
-				<input id="nome" type="text" value="  Nome" onClick="this.value = ''"><br>
-				<!-- Dificuldade -->
-				<select id="dificuldade">
-					<option value="0.9">Fácil</option>
-					<option value="0.7">Médio</option>
-					<option value="0.55">Difícil</option>
-				</select><br>
-				<!-- Iniciar jogo -->
-				<button id="iniciar">Iniciar</button>
-			</form>
-		</div>
-		<div id="fim">
-			<!-- Botão de recomeçar -->
-			<button id="recomecar" onClick="location.reload()">Recomeçar</button>
-			<!-- Ranking -->	
-			<table id="ranking">
-				<thead>
-					<tr>
-						<td>#</td>
-						<td>Pontos</td>
-						<td>Jogador</td>
-					</tr>
-				</thead>
-				<tbody>
-				
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<!-- Aplicação -->
-	<script src="js/app.js"></script>
-</body>
+  <body>
+    <!-- Jogo -->
+    <div class="main" id="jogoplace">
+      <div id="jogo">
+        <!-- Estádio -->
+        <img src="midias/estadio.svg" id="estadio" width="800" height="573" />
+        <!-- Placar -->
+        <div id="placar">00</div>
+        <!-- Bola -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          id="bola"
+        >
+          <g>
+            <path
+              fill="#E6E6E6"
+              d="M24 47C11.318 47 1 36.683 1 24S11.318 1 24 1s23 10.317 23 23-10.318 23-23 23z"
+            ></path>
+            <path
+              fill="#444"
+              d="M29.772 33H18.228a1 1 0 0 1-.951-.691L13.71 21.33a1 1 0 0 1 .363-1.117l9.339-6.785a.996.996 0 0 1 1.176 0l9.339 6.785a.998.998 0 0 1 .363 1.117l-3.567 10.979a1 1 0 0 1-.951.691z"
+            ></path>
+            <path
+              fill="#444"
+              d="M17.332 2.635l6.084 4.385c.174.126.379.188.584.188s.41-.062.584-.188l6.084-4.385a.995.995 0 0 0 .366-.53C28.816 1.39 26.453 1 24 1s-4.816.39-7.034 1.104a.987.987 0 0 0 .366.531z"
+            ></path>
+            <path
+              fill="#444"
+              d="M1.618 23.74l6.052-4.432a.999.999 0 0 0 .361-1.112l-2.288-7.132a.99.99 0 0 0-.388-.509A22.87 22.87 0 0 0 1.001 23.93l.025.003a.995.995 0 0 0 .592-.193z"
+            ></path>
+            <path
+              fill="#444"
+              d="M16.836 45.205l-2.345-7.124a1 1 0 0 0-.946-.688l-7.485-.027h-.003a.987.987 0 0 0-.604.214 23.087 23.087 0 0 0 11.369 8.266.984.984 0 0 0 .014-.641z"
+            ></path>
+            <path
+              fill="#444"
+              d="M41.939 37.366l-7.485.027a.998.998 0 0 0-.946.688l-2.345 7.124a.993.993 0 0 0 .015.642 23.094 23.094 0 0 0 11.369-8.266.992.992 0 0 0-.604-.214l-.004-.001z"
+            ></path>
+            <path
+              fill="#444"
+              d="M42.256 11.064l-2.288 7.132a1 1 0 0 0 .361 1.112l6.052 4.432a1 1 0 0 0 .591.193l.025-.003a22.87 22.87 0 0 0-4.354-13.375.997.997 0 0 0-.387.509z"
+            ></path>
+          </g>
+        </svg>
+        <!-- Feedback -->
+        <div id="feedback"></div>
+        <!-- Luva -->
+        <img src="midias/luva.svg" id="luva" width="150" />
+      </div>
+    </div>
+    <!-- Modal de dialog -->
+    <div class="main" id="modal">
+      <!-- -->
+      <div id="inicio">
+        <form>
+          <!-- Nome -->
+          <input
+            id="nome"
+            type="text"
+            value="  Nome"
+            onClick="this.value = ''"
+          /><br />
+          <!-- Dificuldade -->
+          <select id="dificuldade">
+            <option value="0.9">Fácil</option>
+            <option value="0.7">Médio</option>
+            <option value="0.55">Difícil</option> </select
+          ><br />
+          <!-- Iniciar jogo -->
+          <button id="iniciar">Iniciar</button>
+        </form>
+      </div>
+      <div id="fim">
+        <!-- Botão de recomeçar -->
+        <button id="recomecar" onClick="location.reload()">Recomeçar</button>
+        <!-- Ranking -->
+        <table id="ranking">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>Pontos</td>
+              <td>Jogador</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Aplicação -->
+    <script src="js/app.js"></script>
+  </body>
 </html>
