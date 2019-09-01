@@ -55,7 +55,7 @@ async function lancarBola() {
     transitionProperty: 'transform',
     transitionTimingFunction: 'ease-in',
     transitionDuration: `${Math.floor(
-      800 + 3000 / (defesas || 1) + 300 * defesas * Math.random()
+      950 + Math.max(0, 2000 - (defesas || 1) * 100) - 100 * Math.random()
     )}ms`
   });
   const termino = new Promise(resolve => {
@@ -108,7 +108,9 @@ async function iniciaPartida() {
   localStorage.ultimoPlacar = defesas;
 
   while (emPartida) {
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve =>
+      setTimeout(resolve, 200 + Math.max(0, 800 - (defesas || 1) * 50))
+    );
     await lancarBola(defesas);
     defesas++;
   }
