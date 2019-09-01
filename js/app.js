@@ -42,6 +42,12 @@ function reiniciar() {
 $('#jogo').mousemove(function(event) {
   moveLuva(event.pageX, event.pageY);
 });
+$('#jogo').on('touchmove', function(event) {
+  moveLuva(
+    event.originalEvent.touches[0].pageX,
+    event.originalEvent.touches[0].pageY
+  );
+});
 
 // Lança bola
 async function lancarBola() {
@@ -116,11 +122,10 @@ function map(value, min1, max1, min2, max2) {
 
 // Move a luva
 function moveLuva(x, y) {
-  const offset = $('#jogoplace').offset();
   $('#luva').css({
-    left: x - 75 - offset.left,
-    top: y - 55 - offset.top,
-    transform: `rotate(${map(x - offset.left, 0, 700, -40, 40)}deg)`
+    left: x - 75,
+    top: y - 55,
+    transform: `rotate(${map(x, 0, $('#jogo').width(), -40, 40)}deg)`
   });
 }
 
