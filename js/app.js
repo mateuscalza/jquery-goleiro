@@ -55,7 +55,7 @@ async function lancarBola() {
     transitionProperty: 'transform',
     transitionTimingFunction: 'ease-in',
     transitionDuration: `${Math.floor(
-      1300 + 2000 / (defesas || 1) + 300 * defesas * Math.random()
+      800 + 3000 / (defesas || 1) + 300 * defesas * Math.random()
     )}ms`
   });
   const termino = new Promise(resolve => {
@@ -66,8 +66,8 @@ async function lancarBola() {
   const posicaoAtual = $('#bola')
     .get(0)
     .getBoundingClientRect();
-  const proporcaoX = Math.min(0.5, Math.max(-0.5, (Math.random() - 0.5) * 2));
-  const proporcaoY = Math.min(0.5, Math.max(-0.5, (Math.random() - 0.5) * 2));
+  const proporcaoX = Math.min(0.4, Math.max(-0.4, (Math.random() - 0.5) * 2));
+  const proporcaoY = Math.min(0.4, Math.max(-0.4, (Math.random() - 0.5) * 2));
   const deslocamentoX = Math.floor(
     proporcaoX < 0
       ? proporcaoX * posicaoAtual.left
@@ -78,7 +78,6 @@ async function lancarBola() {
       ? proporcaoY * posicaoAtual.top
       : proporcaoY * posicaoAtual.bottom
   );
-  console.log({ proporcaoX, proporcaoY, deslocamentoX, deslocamentoY });
 
   const rotacao = (Math.random() - 0.5) * 500;
 
@@ -131,11 +130,24 @@ function moveLuva(x, y) {
 
 // Verifica gol
 async function validaDefesa() {
-  console.log('verificaGol');
-  if (Math.random() > 0.9) {
-    reiniciar();
-  } else {
+  const rectBola = $('#bola')
+    .get(0)
+    .getBoundingClientRect();
+  const bolaCentroX = rectBola.left + rectBola.width / 2;
+  const bolaCentroY = rectBola.top + rectBola.height / 2;
+  const rectLuvas = $('#luva')
+    .get(0)
+    .getBoundingClientRect();
+
+  if (
+    bolaCentroX >= rectLuvas.left - 50 &&
+    bolaCentroX <= rectLuvas.right + 50 &&
+    bolaCentroY >= rectLuvas.top - 50 &&
+    bolaCentroY <= rectLuvas.bottom + 50
+  ) {
     $('#placar').text(defesas + 1);
     localStorage.ultimoPlacar = defesas + 1;
+  } else {
+    reiniciar();
   }
 }
