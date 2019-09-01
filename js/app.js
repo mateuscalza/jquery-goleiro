@@ -1,5 +1,6 @@
 let emPartida = false;
 let defesas = 0;
+let audioFundo = null;
 
 // Ao clicar em iniciar
 $('#iniciar').click(function(event) {
@@ -36,6 +37,11 @@ function reiniciar() {
   $('#modal').show();
 
   preparaUltimoPlacar();
+
+  if (audioFundo) {
+    audioFundo.pause();
+    audioFundo = null;
+  }
 }
 
 // Ao mover o cursor
@@ -51,11 +57,12 @@ $('#jogo').on('touchmove', function(event) {
 
 // Lança bola
 async function lancarBola() {
+  audio('chute.wav', 1);
   $('#bola').css({
     transitionProperty: 'transform',
     transitionTimingFunction: 'ease-in',
     transitionDuration: `${Math.floor(
-      950 + Math.max(0, 2000 - (defesas || 1) * 100) - 100 * Math.random()
+      700 + Math.max(0, 2000 - (defesas || 1) * 100) - 150 * Math.random()
     )}ms`
   });
   const termino = new Promise(resolve => {
@@ -101,11 +108,28 @@ async function lancarBola() {
     });
 }
 
+// Audio
+function audio(file, volume = 1) {
+  try {
+    const elementoNativo = document.createElement('audio');
+    elementoNativo.src = `midias/${file}`;
+    elementoNativo.volume = volume;
+    elementoNativo.play();
+    return elementoNativo;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 // Partida
 async function iniciaPartida() {
   emPartida = true;
   defesas = 0;
   localStorage.ultimoPlacar = defesas;
+
+  audioFundo = audio('background.mp3', 0.3);
+  audioFundo.currentTime = 4;
+  audioFundo.loop = true;
 
   while (emPartida) {
     await new Promise(resolve =>
@@ -149,7 +173,10 @@ async function validaDefesa() {
   ) {
     $('#placar').text(defesas + 1);
     localStorage.ultimoPlacar = defesas + 1;
+
+    audio('espalmar-agarrar.mp3', 1);
   } else {
+    audio('grito_de_gol.mp3', 1);
     reiniciar();
   }
 }
