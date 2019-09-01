@@ -49,6 +49,8 @@ $('#jogo').mousemove(function(event) {
   moveLuva(event.pageX, event.pageY);
 });
 $('#jogo').on('touchmove', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
   moveLuva(
     event.originalEvent.touches[0].pageX,
     event.originalEvent.touches[0].pageY

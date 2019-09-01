@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "goleiro",
+  "alias": "goleiro",
+  "public": true,
+  "regions": ["gru1", "sfo1"],
+  "builds": [{ "src": "**", "use": "@now/static" }],
+  "routes": [
+    {
+      "src": "/",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "index.html"
+    },
+    { "src": "/(.+)", "dest": "$1" }
+  ]
+}
