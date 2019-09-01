@@ -16,7 +16,7 @@
         <!-- Estádio -->
         <img src="midias/estadio.svg" id="estadio" width="800" height="573" />
         <!-- Placar -->
-        <div id="placar">00</div>
+        <div id="placar">0</div>
         <!-- Bola -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -66,38 +66,12 @@
     <div class="main" id="modal">
       <!-- -->
       <div id="inicio">
-        <form>
-          <!-- Nome -->
-          <input
-            id="nome"
-            type="text"
-            value="  Nome"
-            onClick="this.value = ''"
-          /><br />
-          <!-- Dificuldade -->
-          <select id="dificuldade">
-            <option value="0.9">Fácil</option>
-            <option value="0.7">Médio</option>
-            <option value="0.55">Difícil</option> </select
-          ><br />
-          <!-- Iniciar jogo -->
-          <button id="iniciar">Iniciar</button>
-        </form>
-      </div>
-      <div id="fim">
-        <!-- Botão de recomeçar -->
-        <button id="recomecar" onClick="location.reload()">Recomeçar</button>
-        <!-- Ranking -->
-        <table id="ranking">
-          <thead>
-            <tr>
-              <td>#</td>
-              <td>Pontos</td>
-              <td>Jogador</td>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <div id="ultimo-placar">
+          Último placar:
+          <span></span>
+        </div>
+        <!-- Iniciar jogo -->
+        <button id="iniciar">INICIAR</button>
       </div>
     </div>
 
